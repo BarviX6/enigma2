@@ -191,8 +191,6 @@
 		<key id="KEY_UP" mapto="zapDown" flags="mr" />
 		<key id="KEY_DOWN" mapto="zapUp" flags="mr" />
 		<key id="KEY_OK" mapto="openServiceList" flags="mr" />
-		<key id="KEY_PREVIOUS" mapto="historyBack" flags="mr" />
-		<key id="KEY_NEXT" mapto="historyNext" flags="mr" />
 		<key id="KEY_LEFT" mapto="historyBack" flags="b" />
 		<key id="KEY_RIGHT" mapto="historyNext" flags="b" />
 		<key id="KEY_BACK" mapto="historyBack" flags="b" />
@@ -327,8 +325,6 @@
 		<key id="KEY_DIRECTORY" mapto="showPluginBrowser" flags="b" />
 		<key id="KEY_PROG1" mapto="HarddiskSetup" flags="b" />
 		<key id="KEY_OPEN" mapto="showMovies" flags="b" />
-		<key id="KEY_F1" mapto="showWWW" flags="b" />
-		<key id="KEY_F2" mapto="showMC" flags="b" />
 	</map>
 
 	<map context="InfobarAudioSelectionActions">
@@ -711,8 +707,8 @@
 	</map>
 
 	<map context="TvRadioActions">
-		<key id="KEY_TV" mapto="keyTV" flags="m" />
-		<key id="KEY_RADIO" mapto="keyRadio" flags="m" />
+		<key id="KEY_TV" mapto="keyTV" flags="b"/>
+		<key id="KEY_RADIO" mapto="keyRadio" flags="b"/>
 	</map>
 
 	<map context="TimerEditActions">
@@ -1069,6 +1065,8 @@
 		<key id="KEY_RESTART" mapto="slow" flags="b"/>
 		<key id="KEY_BOOKMARKS" mapto="mark" flags="b"/>
 		<key id="KEY_BOOKMARKS" mapto="mark_long" flags="l"/>
+		<key id="KEY_VMODE" mapto="vmode" flags="b"/>
+		<key id="KEY_VMODE" mapto="vmode_long" flags="l"/>
 		<key id="KEY_POWER" mapto="power" flags="b"/>
 		<key id="KEY_POWER" mapto="power_long" flags="l"/>
 		<key id="KEY_SLEEP" mapto="sleep" flags="b"/>
@@ -1105,6 +1103,26 @@
 		<key id="KEY_MOUSE" mapto="mouse_long" flags="l"/>
 		<key id="KEY_VOD" mapto="vod" flags="b"/>
 		<key id="KEY_VOD" mapto="vod_long" flags="l"/>
+		<key id="KEY_TVSAT" mapto="tvsat" flags="b"/>
+		<key id="KEY_TVSAT" mapto="tvsat_long" flags="l"/>
+		<key id="KEY_PICASA" mapto="picasa" flags="m"/>
+		<key id="KEY_SHOUTCAST" mapto="shoutcast" flags="m"/>
+		<key id="KEY_YOUTUBE" mapto="youtube" flags="m"/>
+		<key id="KEY_SPARK" mapto="spark" flags="m"/>
+		<key id="KEY_FIND" mapto="find" flags="b"/>
+		<key id="KEY_FIND" mapto="find_long" flags="l"/>
+		<key id="KEY_PLAYMODE" mapto="playmode" flags="b"/>
+		<key id="KEY_PLAYMODE" mapto="playmode_long" flags="l"/>
+		<key id="KEY_USB" mapto="usb" flags="b"/>
+		<key id="KEY_USB" mapto="usb_long" flags="l"/>
+		<key id="KEY_PORTAL" mapto="portal" flags="b"/>
+		<key id="KEY_PORTAL" mapto="portal_long" flags="l"/>
+		<key id="KEY_SLOW" mapto="slow" flags="b"/>
+		<key id="KEY_SLOW" mapto="slow_long" flags="l"/>
+		<key id="KEY_FAST" mapto="fast" flags="b"/>
+		<key id="KEY_FAST" mapto="fast_long" flags="l"/>
+		<key id="KEY_RECALL" mapto="recall" flags="b"/>
+		<key id="KEY_RECALL" mapto="recall_long" flags="l"/>
 		<key id="KEY_KEYBOARD" mapto="keyboard" flags="b"/>
 		<key id="KEY_KEYBOARD" mapto="keyboard_long" flags="l"/>
 	</map>
