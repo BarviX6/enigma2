@@ -118,6 +118,7 @@ def getAboutText():
 	AboutText += _("Skin:\t\t%s") % config.skin.primary_skin.value.split("/")[0] + _("  (%s x %s)") % (skinWidth, skinHeight) + "\n"
 
 	AboutText += _("GStreamer:\t\t%s") % about.getGStreamerVersionString() + "\n"
+	AboutText += _("FFmpeg:\t\t%s") % about.getFFmpegVersionString() + "\n"
 	AboutText += _("Python:\t\t%s") % about.getPythonVersionString() + "\n"
 
 	MyFlashDate = about.getFlashDateString()
