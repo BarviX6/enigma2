@@ -2,12 +2,11 @@ from __future__ import print_function
 from __future__ import absolute_import
 # the implementation here is a bit crappy.
 import time
-from Tools.Directories import resolveFilename, SCOPE_CONFIG
-from boxbranding import getBoxType
+from Directories import resolveFilename, SCOPE_CONFIG
 
-boxtype = getBoxType()
+from enigma import evfd  # Used for fulan vfd
 
-PERCENTAGE_START = 50
+PERCENTAGE_START = 0
 PERCENTAGE_END = 100
 
 profile_start = time.time()
@@ -17,9 +16,7 @@ total_time = 1
 profile_file = None
 
 try:
-	f = open(resolveFilename(SCOPE_CONFIG, "profile"), "r")
-	profile_old = f.readlines()
-	f.close()
+	profile_old = open(resolveFilename(SCOPE_CONFIG, "profile"), "r").readlines()
 
 	t = None
 	for line in profile_old:
@@ -47,25 +44,8 @@ def profile(id):
 			else:
 				perc = PERCENTAGE_START
 			try:
-				if boxtype in ("classm", "axodin", "axodinc", "starsatlx", "evo", "genius", "galaxym6" ):
-					f = open("/dev/dbox/oled0", "w")
-					f.write("%d" % perc)
-				elif boxtype in ('gb800solo', 'gb800se', 'gb800seplus', 'gbultrase'):
-					f = open("/dev/mcu", "w")
-					f.write("%d  \n" % perc)
-				elif boxtype in ("mixosf5", "gi9196m", "osmini", "spycatmini", "osminiplus", "spycatminiplus"):
-					f = open("/proc/progress", "w")
-					f.write("%d" % perc)
-				elif boxtype in ("xpeedlx3", "sezammarvel", "atemionemesis", "fegasusx3", "fegasusx5s", "fegasusx5t"):
-					f = open("/proc/vfd", "w")
-					f.write("Loading %d %%" % perc)
-				elif boxtype in ('amikomini', 'amiko8900', 'sognorevolution', 'arguspingulux', 'arguspinguluxmini', 'sparkreloaded', 'sabsolo', 'sparklx', 'gis8120'):
-					f = open("/proc/vfd", "w")
-					f.write("%d \n" % perc)
-				else:
-					f = open("/proc/progress", "w")
-					f.write("%d \n" % perc)
-				f.close()
+				open("/proc/progress", "w").write("%d \n" % perc)
+				evfd.getInstance().vfd_write_string("-%02d-" % perc)  # Used for fulan vfd
 			except IOError:
 				pass
 
