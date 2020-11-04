@@ -612,7 +612,7 @@
 	<map context="MoviePlayerActions">
 		<key id="KEY_TV" mapto="leavePlayer" flags="m" />
 		<key id="KEY_STOP" mapto="leavePlayer" flags="m" />
-		<key id="KEY_EXIT" mapto="leavePlayer" flags="m" />
+		<key id="KEY_BACK" mapto="leavePlayer" flags="m" />
 		<key id="KEY_CHANNELUP" mapto="channelUp" flags="m" />
 		<key id="KEY_CHANNELDOWN" mapto="channelDown" flags="m" />
 		<key id="KEY_PREVIOUS" mapto="movePrev" flags="b" />
@@ -694,6 +694,8 @@
 		<key id="KEY_NEXT" mapto="nextMarker" flags="m" />
 		<key id="KEY_BACK" mapto="prevMarker" flags="m" />
 		<key id="KEY_FORWARD" mapto="nextMarker" flags="m" />
+		<key id="KEY_UP" mapto="keyUp" flags="mr" />
+		<key id="KEY_DOWN" mapto="keyDown" flags="mr" />
 	</map>
 
 	<map context="ChannelSelectEPGActions">
@@ -939,14 +941,14 @@
 	</map>
 
 	<map context="DVDPlayerActions">
-		<key id="KEY_MENU" mapto="dvdMenu" flags="m"/>
-		<key id="KEY_INFO" mapto="toggleInfo" flags="m"/>
-		<key id="KEY_CHANNELUP" mapto="nextTitle" flags="m"/>
-		<key id="KEY_CHANNELDOWN" mapto="prevTitle" flags="m"/>
+		<key id="KEY_MENU" mapto="dvdMenu" flags="m" />
+		<key id="KEY_INFO" mapto="toggleInfo" flags="m" />
+		<key id="KEY_CHANNELUP" mapto="nextTitle" flags="m" />
+		<key id="KEY_CHANNELDOWN" mapto="prevTitle" flags="m" />
 		<device name="dreambox remote control (native)">
-			<key id="KEY_PREVIOUS" mapto="prevChapter" flags="m"/>
-			<key id="KEY_NEXT" mapto="nextChapter" flags="m"/>
-			<key id="KEY_TV" mapto="tv" flags="m"/>
+			<key id="KEY_PREVIOUS" mapto="prevChapter" flags="m" />
+			<key id="KEY_NEXT" mapto="nextChapter" flags="m" />
+			<key id="KEY_TV" mapto="tv" flags="m" />
 			<key id="KEY_AUDIO" mapto="AudioSelection" flags="m" />
 			<key id="KEY_AUDIO" mapto="dvdAudioMenu" flags="l" />
 			<key id="KEY_RADIO" mapto="nextAudioTrack" flags="m" />
@@ -1050,7 +1052,7 @@
 		<key id="KEY_ARCHIVE" mapto="archive_long" flags="l" />
 		<key id="KEY_OPEN" mapto="open" flags="b" />
 		<key id="KEY_OPEN" mapto="open_long" flags="l" />
-		<key id="KEY_OPTION" mapto="option" flags="b"/ >
+		<key id="KEY_OPTION" mapto="option" flags="b" />
 		<key id="KEY_OPTION" mapto="option_long" flags="l" />
 		<key id="KEY_WWW" mapto="www" flags="b" />
 		<key id="KEY_WWW" mapto="www_long" flags="l" />
@@ -1089,10 +1091,10 @@
 		<key id="KEY_F2" mapto="f2_long" flags="l" />
 		<key id="KEY_F3" mapto="f3" flags="b" />
 		<key id="KEY_F3" mapto="f3_long" flags="l" />
-		<key id="KEY_F4" mapto="f4" flags="b"/ >
+		<key id="KEY_F4" mapto="f4" flags="b" />
 		<key id="KEY_F4" mapto="f4_long" flags="l" />
 		<key id="KEY_F6" mapto="f6" flags="b" />
-		<key id="KEY_F6" mapto="f6_long" flags="l"/>
+		<key id="KEY_F6" mapto="f6_long" flags="l" />
 		<key id="KEY_AUX" mapto="HDMIin" flags="b" />
 		<key id="KEY_AUX" mapto="HDMIin_long" flags="l" />
 		<key id="KEY_ZOOM" mapto="zoom" flags="b" />
