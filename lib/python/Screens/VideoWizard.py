@@ -7,6 +7,7 @@ from Screens.Screen import Screen
 from Components.Pixmap import Pixmap
 from Components.config import config, ConfigBoolean, configfile
 from Components.SystemInfo import SystemInfo
+from enigma import evfd
 
 from Tools.Directories import resolveFilename, SCOPE_SKIN, SCOPE_ACTIVE_SKIN
 from Tools.HardwareInfo import HardwareInfo
@@ -97,6 +98,7 @@ class VideoWizard(WizardLanguage, Rc):
 		config.misc.videowizardenabled.value = 0
 		config.misc.videowizardenabled.save()
 		configfile.save()
+        evfd.getInstance().vfd_write_string("                ")		
 
 	def listInputChannels(self):
 		hw_type = HardwareInfo().get_device_name()
